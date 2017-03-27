@@ -1,2 +1,2 @@
 # Resonpsive-Design-Pattern
-Four major responsive design pattern.
+Four major responsive design patterns.
