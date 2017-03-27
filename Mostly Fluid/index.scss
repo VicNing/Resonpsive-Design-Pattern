@@ -1,0 +1,65 @@
+/**
+ * Created by Neil on 2017/3/27.
+ */
+$break_point_small: 480px;
+$break_point_medium: 960px;
+$break_point_large: 1200px;
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+@mixin responsive($bg,$width_at_small,$width_at_medium) {
+  min-height: 150px;
+  background-color: $bg;
+  @media screen and(max-width: $break_point_small) {
+    width: $width_at_small;
+  }
+  @media screen and(min-width: $break_point_small+1px) {
+    width: $width_at_medium;
+  }
+}
+
+.container {
+  @include flexbox;
+  flex-wrap: wrap;
+  width: 100%;
+  @media screen and(min-width: $break_point_small+1px) {
+  }
+  @media screen and(min-width: $break_point_large+1px) {
+    padding: 0 100px;
+  }
+}
+
+.content-a {
+  @include responsive(#b4b472, 100%, 50%);
+}
+
+.content-b {
+  @include responsive(crimson, 100%, 50%);
+}
+
+.content-c {
+  @include responsive(mediumseagreen, 100%, 33.33%);
+}
+
+.content-d {
+  @include responsive(darksalmon, 100%, 33.33%);
+}
+
+.content-e {
+  @include responsive(slateblue, 100%, 33.33%);
+}

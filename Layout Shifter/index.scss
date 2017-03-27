@@ -1,0 +1,90 @@
+$break_point_small: 768px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+html, body {
+  @media screen and (min-width: $break_point_small+1) {
+    height: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: $break_point_small) {
+
+  }
+  @media screen and (min-width: $break_point_small+1) {
+    padding-left: 80px;
+  }
+}
+
+.nav {
+  background-color: slateblue;
+  @media screen and (max-width: $break_point_small) {
+    width: 100%;
+    height: 50px;
+  }
+  @media screen and (min-width: $break_point_small+1px) {
+    position: fixed;
+    left: 0;
+    width: 80px;
+    height: 100%;
+  }
+}
+
+.content-a {
+  background-color: #b4b472;
+  @media screen and (max-width: $break_point_small) {
+    width: 100%;
+    height: 300px;
+  }
+  @media screen and (min-width: $break_point_small+1) {
+    width: 70%;
+    height: 300px;
+  }
+}
+
+.content-b {
+  background-color: mediumseagreen;
+  @media screen and (max-width: $break_point_small) {
+    width: 100%;
+    height: 200px;
+  }
+  @media screen and (min-width: $break_point_small+1) {
+    width: 30%;
+    height: 300px;
+
+  }
+}
+
+.content-c {
+  background-color: crimson;
+  @media screen and (max-width: $break_point_small) {
+    width: 100%;
+    height: 300px;
+  }
+  @media screen and (min-width: $break_point_small+1) {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.content-d {
+  background-color: darkmagenta;
+  @media screen and (max-width: $break_point_small) {
+    width: 100%;
+    height: 300px;
+  }
+  @media screen and (min-width: $break_point_small+1) {
+    width: 100%;
+    height: 400px;
+  }
+}

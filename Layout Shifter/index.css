@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+div {
+  box-sizing: border-box; }
+
+@media screen and (min-width: 769px) {
+  html, body {
+    height: 100%; } }
+
+.container {
+  display: flex;
+  flex-wrap: wrap; }
+  @media screen and (min-width: 769px) {
+    .container {
+      padding-left: 80px; } }
+
+.nav {
+  background-color: slateblue; }
+  @media screen and (max-width: 768px) {
+    .nav {
+      width: 100%;
+      height: 50px; } }
+  @media screen and (min-width: 769px) {
+    .nav {
+      position: fixed;
+      left: 0;
+      width: 80px;
+      height: 100%; } }
+
+.content-a {
+  background-color: #b4b472; }
+  @media screen and (max-width: 768px) {
+    .content-a {
+      width: 100%;
+      height: 300px; } }
+  @media screen and (min-width: 769px) {
+    .content-a {
+      width: 70%;
+      height: 300px; } }
+
+.content-b {
+  background-color: mediumseagreen; }
+  @media screen and (max-width: 768px) {
+    .content-b {
+      width: 100%;
+      height: 200px; } }
+  @media screen and (min-width: 769px) {
+    .content-b {
+      width: 30%;
+      height: 300px; } }
+
+.content-c {
+  background-color: crimson; }
+  @media screen and (max-width: 768px) {
+    .content-c {
+      width: 100%;
+      height: 300px; } }
+  @media screen and (min-width: 769px) {
+    .content-c {
+      width: 100%;
+      height: 400px; } }
+
+.content-d {
+  background-color: darkmagenta; }
+  @media screen and (max-width: 768px) {
+    .content-d {
+      width: 100%;
+      height: 300px; } }
+  @media screen and (min-width: 769px) {
+    .content-d {
+      width: 100%;
+      height: 400px; } }
+
+/*# sourceMappingURL=index.css.map */

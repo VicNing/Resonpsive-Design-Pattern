@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+    <nav class="nav"></nav>
+    <div class="main"></div>
+    <div class="wing"></div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        (function (document) {
+            function foo() {
+                if (navDisplayed) {
+                    nav.style.transform = 'translateX(-100%)';
+                } else {
+                    nav.style.transform = 'translateX(0)';
+                }
+                navDisplayed = !navDisplayed;
+            }
+
+            let navDisplayed = false;
+            let hasEventListener = false;
+            let nav = document.querySelector('.nav');
+            let main = document.querySelector('.main');
+            let clickHandler = function clickHandler() {
+                let timer = null;
+                return function () {
+                    console.log('ck');
+                    clearTimeout(timer);
+                    timer = setTimeout(foo, 400);
+                }
+            }();
+
+
+            main.addEventListener('click', clickHandler);
+            window.addEventListener('resize', function () {
+                if (window.innerWidth <= 480 && !hasEventListener) {
+                    hasEventListener = !hasEventListener;
+                    main.addEventListener('click', clickHandler);
+                } else if (window.innerWidth > 480 && hasEventListener) {
+                    hasEventListener = !hasEventListener;
+                    nav.style.transform = '';
+                    main.removeEventListener('click', clickHandler);
+                }
+            });
+        }(document));
+    });
+</script>
+</body>
+</html>
